@@ -30,9 +30,9 @@ $sql = "CREATE TABLE IF NOT EXISTS Carnet (
     driver VARCHAR(100),
     phone VARCHAR(20),
     email VARCHAR(100),
-    notifys ENUM('1 mes', '3 meses', '6 meses')
+    notifys ENUM('1 month', '3 months', '6 months'),
     start_date DATE,
-    end_date DATE,
+    end_date DATE
 )";
 
 if ($conn->query($sql) === TRUE) {
@@ -40,6 +40,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
     echo "Error al crear la tabla Carnet: " . $conn->error . "<br>";
 }
+
 
 // Cerrar la conexión
 $conn->close();
