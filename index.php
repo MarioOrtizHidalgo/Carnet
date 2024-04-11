@@ -2,6 +2,7 @@
 
 require_once('models/conectDatebase.php');
 
+
 ?>
 
 <!DOCTYPE html>
@@ -77,7 +78,7 @@ require_once('models/conectDatebase.php');
                                 <td><?php echo $datos->end_date; ?></td>
                                 <td>
                                     <a class="btn btn-warning" href="editCarnet.php?id=<?php echo "$datos->id"; ?>"><i class="fa-solid fa-file-pen"></i></a>
-                                    <a class="btn btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
+                                    <a class="btn btn-danger" href="controllers/deleteCarnet.php?id=<?php echo "$datos->id"; ?>"><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
                         <?php } ?>
