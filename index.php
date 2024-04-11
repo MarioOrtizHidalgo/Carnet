@@ -38,11 +38,20 @@ require_once('models/conectDatebase.php');
                 <input type="email" class="form-control" id="exampleInputPassword1" name="email" required>
             </div>
             <div class="mb-3">
+                <label for="exampleInputFechaInicio" class="form-label">Fecha Inicio</label>
+                <input type="date" class="form-control" id="exampleInputFechaInicio" name="fechainicio" required>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputFechaFin" class="form-label">Fecha Fin</label>
+                <input type="date" class="form-control" id="exampleInputFechaFin" name="fechafin" required>
+            </div>
+            <div class="mb-3">
                 <label for="exampleInputNotify" class="form-label">Notificar</label>
                 <select class="form-select" aria-label="Default select example" name="notificar" required>
-                    <option value="1">1 month</option>
-                    <option value="2">2 months</option>
-                    <option value="3">3 months</option>
+                    <option value="1">Sin notificar</option>
+                    <option value="2">1 mes</option>
+                    <option value="3">3 meses</option>
+                    <option value="4">6 meses</option>
                 </select>
             </div>
             <button type="submit" class="btn btn-primary" name="enviar" value="enviar">Enviar</button>
@@ -50,7 +59,7 @@ require_once('models/conectDatebase.php');
 
         <div class="col-8 p-4">
             <h3 class="text-center fw-bold p-3">Datos de los conductores</h3>
-            <table class="table">
+            <table class="table table-secondary table-striped">
                 <thead>
                   <tr class="bg-info">
                     <th scope="col">ID</th>

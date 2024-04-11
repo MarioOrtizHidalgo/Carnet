@@ -3,7 +3,7 @@
 require_once('models/conectDatebase.php');
 $id = $_GET['id'];
 
-$consulta = $conexion->query("SELECT * FROM Carnet WHERE id=$id");
+$consulta = $conexion->query("SELECT * FROM carnet WHERE id=$id");
 
 ?>
 
@@ -38,11 +38,20 @@ $consulta = $conexion->query("SELECT * FROM Carnet WHERE id=$id");
                     <input type="email" class="form-control" id="exampleInputPassword1" name="email" value="<?php echo "$datos->email"; ?>" required>
                 </div>
                 <div class="mb-3">
+                    <label for="exampleInputFechaInicio" class="form-label">Fecha Inicio</label>
+                    <input type="date" class="form-control" id="exampleInputFechaInicio" name="fechainicio" value="<?php echo "$datos->start_date"; ?>" required>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputFechaFin" class="form-label">Fecha Fin</label>
+                    <input type="date" class="form-control" id="exampleInputFechaFin" name="fechafin" value="<?php echo "$datos->end_date"; ?>" required>
+                </div>
+                <div class="mb-3">
                     <label for="exampleInputNotify" class="form-label">Notificar</label>
                     <select class="form-select" aria-label="Default select example" name="notificar" value="<?php echo "$datos->notifys"; ?>" required>
-                        <option value="1">1 month</option>
-                        <option value="2">2 months</option>
-                        <option value="3">3 months</option>
+                        <option value="1">Sin notificar</option>
+                        <option value="2">1 mes</option>
+                        <option value="3">2 meses</option>
+                        <option value="4">3 meses</option>
                     </select>
                 </div>
 

@@ -25,12 +25,12 @@ if ($conn->query($sql) === TRUE) {
 $conn->select_db($database);
 
 // Crear la tabla Carnet
-$sql = "CREATE TABLE IF NOT EXISTS Carnet (
+$sql = "CREATE TABLE IF NOT EXISTS carnet (
     id INT AUTO_INCREMENT PRIMARY KEY,
     driver VARCHAR(100),
     phone VARCHAR(20),
     email VARCHAR(100),
-    notifys ENUM('1 month', '3 months', '6 months'),
+    notifys ENUM('Sin notificar', '1 mes', '3 meses', '6 meses'),
     start_date DATE,
     end_date DATE
 )";
