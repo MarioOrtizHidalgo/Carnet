@@ -26,27 +26,27 @@ require_once('models/conectDatebase.php');
         <form class="col-4 p-4" method="POST" action="controllers/new_driver.php">
             <h3 class="text-center fw-bold p-3">Nuevo Conductor</h3>
             <div class="mb-3">
-                <label for="exampleInputDriver" class="form-label">Conductor</label>
+                <label for="exampleInputDriver" class="form-label">Conductor *</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="conductor" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputPhone" class="form-label">Teléfono</label>
+                <label for="exampleInputPhone" class="form-label">Teléfono *</label>
                 <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="telefono" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputEmail" class="form-label">Email</label>
+                <label for="exampleInputEmail" class="form-label">Email *</label>
                 <input type="email" class="form-control" id="exampleInputPassword1" name="email" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputFechaInicio" class="form-label">Fecha Inicio</label>
+                <label for="exampleInputFechaInicio" class="form-label">Fecha Inicio *</label>
                 <input type="date" class="form-control" id="exampleInputFechaInicio" name="fechainicio" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputFechaFin" class="form-label">Fecha Fin</label>
+                <label for="exampleInputFechaFin" class="form-label">Fecha Fin *</label>
                 <input type="date" class="form-control" id="exampleInputFechaFin" name="fechafin" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputNotify" class="form-label">Notificar</label>
+                <label for="exampleInputNotify" class="form-label">Notificar *</label>
                 <select class="form-select" aria-label="Default select example" name="notificar" required>
                     <option value="1">Sin notificar</option>
                     <option value="2">1 mes</option>

@@ -39,19 +39,19 @@ $consulta = $conexion->query("SELECT * FROM carnet WHERE id=$id");
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputFechaInicio" class="form-label">Fecha Inicio</label>
-                    <input type="date" class="form-control" id="exampleInputFechaInicio" name="fechainicio" value="<?php echo "$datos->start_date"; ?>" required>
+                    <input type="date" class="form-control" id="exampleInputFechaInicio" name="fechainicio" value="<?php echo date('Y-m-d', strtotime($datos->start_date)); ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputFechaFin" class="form-label">Fecha Fin</label>
-                    <input type="date" class="form-control" id="exampleInputFechaFin" name="fechafin" value="<?php echo "$datos->end_date"; ?>" required>
+                    <input type="date" class="form-control" id="exampleInputFechaFin" name="fechafin" value="<?php echo date('Y-m-d', strtotime($datos->end_date)); ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputNotify" class="form-label">Notificar</label>
-                    <select class="form-select" aria-label="Default select example" name="notificar" value="<?php echo "$datos->notifys"; ?>" required>
-                        <option value="1">Sin notificar</option>
-                        <option value="2">1 mes</option>
-                        <option value="3">2 meses</option>
-                        <option value="4">3 meses</option>
+                    <select class="form-select" aria-label="Default select example" name="notificar" required>
+                        <option value="1" <?php echo ($datos->notifys == "Sin notificar") ? 'selected' : ''; ?>>Sin notificar</option>
+                        <option value="2" <?php echo ($datos->notifys == "1 mes") ? 'selected' : ''; ?>>1 mes</option>
+                        <option value="3" <?php echo ($datos->notifys == "3 meses") ? 'selected' : ''; ?>>3 meses</option>
+                        <option value="4" <?php echo ($datos->notifys == "6 meses") ? 'selected' : ''; ?>>6 meses</option>
                     </select>
                 </div>
 
