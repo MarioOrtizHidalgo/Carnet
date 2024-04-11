@@ -5,7 +5,7 @@ require_once('models/conectDatebase.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -76,7 +76,7 @@ require_once('models/conectDatebase.php');
                                 <td><?php echo $datos->start_date; ?></td>
                                 <td><?php echo $datos->end_date; ?></td>
                                 <td>
-                                    <a class="btn btn-warning" href=""><i class="fa-solid fa-file-pen"></i></a>
+                                    <a class="btn btn-warning" href="editCarnet.php?id=<?php echo "$datos->id"; ?>"><i class="fa-solid fa-file-pen"></i></a>
                                     <a class="btn btn-danger" href=""><i class="fa-solid fa-trash"></i></a>
                                 </td>
                             </tr>
