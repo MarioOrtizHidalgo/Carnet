@@ -41,11 +41,11 @@ require_once('models/conectDatebase.php');
                 <input type="email" class="form-control" id="exampleInputPassword1" name="email" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputFechaInicio" class="form-label">Fecha Inicio *</label>
+                <label for="exampleInputFechaInicio" class="form-label">Fecha Expedicion *</label>
                 <input type="date" class="form-control" id="exampleInputFechaInicio" name="fechainicio" required>
             </div>
             <div class="mb-3">
-                <label for="exampleInputFechaFin" class="form-label">Fecha Fin *</label>
+                <label for="exampleInputFechaFin" class="form-label">Fecha Validez *</label>
                 <input type="date" class="form-control" id="exampleInputFechaFin" name="fechafin" required>
             </div>
             <div class="mb-3">
@@ -74,8 +74,8 @@ require_once('models/conectDatebase.php');
                     <th scope="col">Teléfono 2</th>
                     <th scope="col">Email</th>
                     <th scope="col">Notificar</th>
-                    <th scope="col">FechaInicio</th>
-                    <th scope="col">FechaFin</th>
+                    <th scope="col">Fecha Expedicion</th>
+                    <th scope="col">Fecha Validez</th>
                     <th scope="col"></th>
                   </tr>
                 </thead>
