@@ -2,7 +2,6 @@
 
 require_once('models/conectDatebase.php');
 
-
 ?>
 
 <!DOCTYPE html>
@@ -34,6 +33,10 @@ require_once('models/conectDatebase.php');
                 <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="telefono" required>
             </div>
             <div class="mb-3">
+                <label for="exampleInputPhone" class="form-label">Teléfono 2 *</label>
+                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="telefono2" required>
+            </div>
+            <div class="mb-3">
                 <label for="exampleInputEmail" class="form-label">Email *</label>
                 <input type="email" class="form-control" id="exampleInputPassword1" name="email" required>
             </div>
@@ -47,12 +50,15 @@ require_once('models/conectDatebase.php');
             </div>
             <div class="mb-3">
                 <label for="exampleInputNotify" class="form-label">Notificar *</label>
-                <select class="form-select" aria-label="Default select example" name="notificar" required>
+                <select class="form-select" aria-label="Default select example" name="notificar[]" required multiple>
                     <option value="1">Sin notificar</option>
-                    <option value="2">1 mes</option>
-                    <option value="3">3 meses</option>
-                    <option value="4">6 meses</option>
+                    <option value="2">1 semana</option>
+                    <option value="3">2 semanas</option>
+                    <option value="4">1 mes</option>
+                    <option value="5">3 meses</option>
+                    <option value="6">6 meses</option>
                 </select>
+
             </div>
             <button type="submit" class="btn btn-primary" name="enviar" value="enviar">Enviar</button>
         </form>
@@ -65,6 +71,7 @@ require_once('models/conectDatebase.php');
                     <th scope="col">ID</th>
                     <th scope="col">Conductor</th>
                     <th scope="col">Teléfono</th>
+                    <th scope="col">Teléfono 2</th>
                     <th scope="col">Email</th>
                     <th scope="col">Notificar</th>
                     <th scope="col">FechaInicio</th>
@@ -80,8 +87,9 @@ require_once('models/conectDatebase.php');
                             <tr>
                                 <th scope="row"><?php echo $datos->id; ?></th>
                                 <td><?php echo $datos->driver; ?></td>
-                                <td><?php echo $datos->email; ?></td>
                                 <td><?php echo $datos->phone; ?></td>
+                                <td><?php echo $datos->phone2; ?></td>
+                                <td><?php echo $datos->email; ?></td>
                                 <td><?php echo $datos->notifys; ?></td>
                                 <td><?php echo $datos->start_date; ?></td>
                                 <td><?php echo $datos->end_date; ?></td>

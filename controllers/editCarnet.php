@@ -9,11 +9,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $conductor = $_POST['conductor'];
         $telefono = $_POST['telefono'];
         $email = $_POST['email'];
-        $notificar = $_POST['notificar'];
+        $selectedOptions = implode('<br>', $_POST['notificar']);
         $fechaInicio = $_POST['fechainicio'];
         $fechaFin = $_POST['fechafin'];
 
-        $consulta = $conexion->query(" UPDATE carnet SET driver='$conductor', phone='$telefono', email='$email', notifys='$notificar', start_date='$fechaInicio', end_date='$fechaFin' WHERE id=$id ");
+        $consulta = $conexion->query(" UPDATE carnet SET driver='$conductor', phone='$telefono', email='$email', notifys='$selectedOptions', start_date='$fechaInicio', end_date='$fechaFin' WHERE id=$id ");
 
         header("Location: ../index.php");
 
